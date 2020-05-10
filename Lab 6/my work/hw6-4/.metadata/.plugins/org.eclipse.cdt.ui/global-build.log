@@ -1,0 +1,1191 @@
+15:59:00 **** Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../startup/sysmem.c
+Building file: ../src/GPIO_init.s
+Building file: ../src/main.c
+Building file: ../startup/startup_stm32.s
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Assembler
+Invoking: MCU GCC Assembler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/GPIO_init.o" "../src/GPIO_init.s"
+Finished building: ../src/GPIO_init.s
+Finished building: ../startup/startup_stm32.s
+ 
+../src/main.c: In function 'set_timer':
+../src/main.c:99:6: warning: unused variable 'prescaler' [-Wunused-variable]
+  int prescaler = (4000000 / freq / 100);
+      ^~~~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:205:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+ 
+Building file: ../src/max7219_init.s
+Building file: ../src/max7219_send.s
+Invoking: MCU GCC Assembler
+Invoking: MCU GCC Assembler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/max7219_send.o" "../src/max7219_send.s"
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+Finished building: ../startup/sysmem.c
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/max7219_init.o" "../src/max7219_init.s"
+ 
+Finished building: ../src/main.c
+Finished building: ../src/max7219_init.s
+ 
+ 
+Finished building: ../src/max7219_send.s
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2384	   1160	   1096	   4640	   1220	hw6-4haha.elf
+ 
+15:59:37 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:07:19 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:07:31 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'set_timer':
+../src/main.c:99:6: warning: unused variable 'prescaler' [-Wunused-variable]
+  int prescaler = (4000000 / freq / 100);
+      ^~~~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:205:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2384	   1160	   1096	   4640	   1220	hw6-4haha.elf
+ 
+16:07:36 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:08:48 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:08:58 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:09:03 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'set_timer':
+../src/main.c:99:6: warning: unused variable 'prescaler' [-Wunused-variable]
+  int prescaler = (4000000 / freq / 100);
+      ^~~~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:205:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2384	   1160	   1096	   4640	   1220	hw6-4haha.elf
+ 
+16:09:09 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:09:47 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'set_timer':
+../src/main.c:99:6: warning: unused variable 'prescaler' [-Wunused-variable]
+  int prescaler = (4000000 / freq / 100);
+      ^~~~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:205:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2384	   1160	   1096	   4640	   1220	hw6-4haha.elf
+ 
+16:09:55 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:09:59 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:14:03 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:205:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2392	   1160	   1096	   4648	   1228	hw6-4haha.elf
+ 
+16:14:08 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:15:54 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:15:58 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:16:17 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:16:22 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:16:26 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:205:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2392	   1160	   1096	   4648	   1228	hw6-4haha.elf
+ 
+16:16:29 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:17:14 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:205:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2392	   1160	   1096	   4648	   1228	hw6-4haha.elf
+ 
+16:17:19 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:20:22 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:25:51 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:58:30 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:59:56 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:54:21 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:54:25 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:55:12 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:55:33 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:03:02 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:52:17 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:52:46 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:53:46 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:56:35 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2384	   1160	   1096	   4640	   1220	hw6-4haha.elf
+ 
+18:56:40 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:56:48 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:57:53 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:205:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2392	   1160	   1096	   4648	   1228	hw6-4haha.elf
+ 
+18:57:56 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:01:01 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:01:11 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:11:45 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:217:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2512	   1160	   1096	   4768	   12a0	hw6-4haha.elf
+ 
+19:11:59 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:14:25 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:17:39 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:217:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2512	   1160	   1096	   4768	   12a0	hw6-4haha.elf
+ 
+19:17:44 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:23:20 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:217:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2520	   1160	   1096	   4776	   12a8	hw6-4haha.elf
+ 
+19:24:01 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:217:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2520	   1160	   1096	   4776	   12a8	hw6-4haha.elf
+ 
+19:24:05 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:28:06 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:225:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2408	   1160	   1096	   4664	   1238	hw6-4haha.elf
+ 
+19:28:09 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:29:22 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:29:27 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:36:21 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:226:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2512	   1160	   1096	   4768	   12a0	hw6-4haha.elf
+ 
+19:36:24 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:39:05 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:226:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2512	   1160	   1096	   4768	   12a0	hw6-4haha.elf
+ 
+19:39:08 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:42:28 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:226:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2512	   1160	   1096	   4768	   12a0	hw6-4haha.elf
+ 
+19:42:31 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:44:04 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:226:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2512	   1160	   1096	   4768	   12a0	hw6-4haha.elf
+ 
+19:44:07 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:49:07 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:226:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2512	   1160	   1096	   4768	   12a0	hw6-4haha.elf
+ 
+19:49:10 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:51:03 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:51:05 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:56:05 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2608	   1160	   1096	   4864	   1300	hw6-4haha.elf
+ 
+19:56:11 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:57:37 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:58:24 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2648	   1160	   1096	   4904	   1328	hw6-4haha.elf
+ 
+19:58:26 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:59:37 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2648	   1160	   1096	   4904	   1328	hw6-4haha.elf
+ 
+19:59:44 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:01:05 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2616	   1160	   1096	   4872	   1308	hw6-4haha.elf
+ 
+20:01:07 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:03:38 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:228:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2528	   1160	   1096	   4784	   12b0	hw6-4haha.elf
+ 
+20:03:40 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:04:36 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:228:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2560	   1160	   1096	   4816	   12d0	hw6-4haha.elf
+ 
+20:04:39 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:05:53 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:228:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2544	   1160	   1096	   4800	   12c0	hw6-4haha.elf
+ 
+20:05:55 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:06:53 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2616	   1160	   1096	   4872	   1308	hw6-4haha.elf
+ 
+20:07:01 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:07:06 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:08:07 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2608	   1160	   1096	   4864	   1300	hw6-4haha.elf
+ 
+20:08:09 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:08:16 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:08:19 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:09:36 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:228:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2544	   1160	   1096	   4800	   12c0	hw6-4haha.elf
+ 
+20:09:38 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:12:02 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:228:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2536	   1160	   1096	   4792	   12b8	hw6-4haha.elf
+ 
+20:12:04 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:13:14 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:228:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2552	   1160	   1096	   4808	   12c8	hw6-4haha.elf
+ 
+20:13:17 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:14:53 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:228:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2544	   1160	   1096	   4800	   12c0	hw6-4haha.elf
+ 
+20:14:55 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:15:02 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:17:40 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:228:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2552	   1160	   1096	   4808	   12c8	hw6-4haha.elf
+ 
+20:17:42 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:17:50 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:20:31 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:234:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2592	   1160	   1096	   4848	   12f0	hw6-4haha.elf
+ 
+20:20:34 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:22:14 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:234:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2504	   1160	   1096	   4760	   1298	hw6-4haha.elf
+ 
+20:22:17 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:23:06 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:27:19 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:235:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2544	   1160	   1096	   4800	   12c0	hw6-4haha.elf
+ 
+20:27:21 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:49:29 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:235:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2512	   1160	   1096	   4768	   12a0	hw6-4haha.elf
+ 
+20:49:41 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:00:42 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:00:44 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:02:58 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw6\my work\hw6-4\hw6-4haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:235:6: warning: unused variable 'cnt_way' [-Wunused-variable]
+  int cnt_way = 0;
+      ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: hw6-4haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw6/my work/hw6-4/hw6-4haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw6-4haha.elf" @"objects.list"   -lm
+Finished building target: hw6-4haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw6-4haha.elf" "hw6-4haha.bin"
+arm-none-eabi-size "hw6-4haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2512	   1160	   1096	   4768	   12a0	hw6-4haha.elf
+ 
+21:03:00 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:42:25 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:44:17 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:47:02 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:47:10 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:47:37 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:47:51 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:47:55 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:52:36 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:57:58 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:58:21 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:00:49 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:00:52 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:02:45 **** Incremental Build of configuration Debug for project hw6-4haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.

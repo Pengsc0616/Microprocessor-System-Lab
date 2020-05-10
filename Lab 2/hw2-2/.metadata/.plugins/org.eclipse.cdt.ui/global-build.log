@@ -1,0 +1,280 @@
+23:55:12 **** Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+Building file: ../startup/startup_stm32.s
+Building file: ../startup/sysmem.c
+Invoking: MCU GCC Assembler
+Invoking: MCU GCC Compiler
+C:\stephen_peng\大三上\微處理機\hw2\my work\hw2-2\hw2-2haha\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+C:\stephen_peng\大三上\微處理機\hw2\my work\hw2-2\hw2-2haha\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\stephen_peng\大三上\微處理機\hw2\my work\hw2-2\hw2-2haha\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../startup/startup_stm32.s
+ 
+../src/main.s: Assembler messages:
+../src/main.s:12: Warning: register range not in ascending order
+../src/main.s:19: Error: unshifted register required -- `and r5,r2,#1'
+../src/main.s:22: Error: unshifted register required -- `and r5,r3,#1'
+../src/main.s:35: Error: unshifted register required -- `and r5,r3,#1'
+../src/main.s:66: Error: invalid register list to push/pop instruction -- `pop {lr}'
+../src/main.s:67: Error: lo register required -- `add r9,r9,#1'
+../src/main.s:72: Error: ARM register expected -- `ldr ro,m'
+../src/main.s:75: Error: only lo regs allowed with immediate -- `movs r8,#0'
+../src/main.s:76: Error: only lo regs allowed with immediate -- `movs r9,#0'
+../src/main.s:79: Error: lo register required -- `lsl r8,r7'
+../src/main.s:82: Error: lo register required -- `str r8,[r4]'
+../src/main.s:83: Error: lo register required -- `str r9,[r6]'
+../src/main.s:73: Error: invalid offset, value too big (0xFFFFFFA8)
+make: *** [src/main.o] Error 1
+src/subdir.mk:15: recipe for target 'src/main.o' failed
+make: *** Waiting for unfinished jobs....
+Finished building: ../startup/sysmem.c
+ 
+23:59:19 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\stephen_peng\大三上\微處理機\hw2\my work\hw2-2\hw2-2haha\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:12: Warning: register range not in ascending order
+../src/main.s:19: Error: unshifted register required -- `and r5,r2,#1'
+../src/main.s:22: Error: unshifted register required -- `and r5,r3,#1'
+../src/main.s:35: Error: unshifted register required -- `and r5,r3,#1'
+../src/main.s:66: Error: invalid register list to push/pop instruction -- `pop {lr}'
+../src/main.s:67: Error: lo register required -- `add r9,r9,#1'
+../src/main.s:72: Error: ARM register expected -- `ldr ro,m'
+../src/main.s:75: Error: only lo regs allowed with immediate -- `movs r8,#0'
+../src/main.s:76: Error: only lo regs allowed with immediate -- `movs r9,#0'
+../src/main.s:79: Error: lo register required -- `lsl r8,r7'
+../src/main.s:82: Error: lo register required -- `str r8,[r4]'
+../src/main.s:83: Error: lo register required -- `str r9,[r6]'
+../src/main.s:73: Error: invalid offset, value too big (0xFFFFFFA8)
+src/subdir.mk:15: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+00:00:42 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\stephen_peng\大三上\微處理機\hw2\my work\hw2-2\hw2-2haha\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:15: Warning: register range not in ascending order
+../src/main.s:75: Error: ARM register expected -- `ldr ro,m'
+src/subdir.mk:15: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+00:02:15 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\stephen_peng\大三上\微處理機\hw2\my work\hw2-2\hw2-2haha\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:16: Warning: register range not in ascending order
+../src/main.s:76: Error: ARM register expected -- `ldr ro,m'
+make: *** [src/main.o] Error 1
+src/subdir.mk:15: recipe for target 'src/main.o' failed
+00:02:42 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\stephen_peng\大三上\微處理機\hw2\my work\hw2-2\hw2-2haha\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:16: Warning: register range not in ascending order
+../src/main.s:76: Error: ARM register expected -- `ldr ro,m'
+make: *** [src/main.o] Error 1
+src/subdir.mk:15: recipe for target 'src/main.o' failed
+00:02:56 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\stephen_peng\大三上\微處理機\hw2\my work\hw2-2\hw2-2haha\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:16: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: hw2-2haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw2/my work/hw2-2/hw2-2haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw2-2haha.elf" @"objects.list"   -lm
+Finished building target: hw2-2haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw2-2haha.elf" "hw2-2haha.bin"
+arm-none-eabi-size "hw2-2haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1112	   1096	   1088	   3296	    ce0	hw2-2haha.elf
+ 
+00:03:19 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:03:51 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:07:59 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\stephen_peng\大三上\微處理機\hw2\my work\hw2-2\hw2-2haha\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:16: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: hw2-2haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw2/my work/hw2-2/hw2-2haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw2-2haha.elf" @"objects.list"   -lm
+Finished building target: hw2-2haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw2-2haha.elf" "hw2-2haha.bin"
+arm-none-eabi-size "hw2-2haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1112	   1096	   1088	   3296	    ce0	hw2-2haha.elf
+ 
+00:08:07 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:09:52 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\stephen_peng\大三上\微處理機\hw2\my work\hw2-2\hw2-2haha\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:16: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: hw2-2haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw2/my work/hw2-2/hw2-2haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw2-2haha.elf" @"objects.list"   -lm
+Finished building target: hw2-2haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw2-2haha.elf" "hw2-2haha.bin"
+arm-none-eabi-size "hw2-2haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1112	   1096	   1088	   3296	    ce0	hw2-2haha.elf
+ 
+00:09:58 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:10:37 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\stephen_peng\大三上\微處理機\hw2\my work\hw2-2\hw2-2haha\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:16: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: hw2-2haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw2/my work/hw2-2/hw2-2haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw2-2haha.elf" @"objects.list"   -lm
+Finished building target: hw2-2haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw2-2haha.elf" "hw2-2haha.bin"
+arm-none-eabi-size "hw2-2haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1112	   1096	   1088	   3296	    ce0	hw2-2haha.elf
+ 
+00:10:42 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:11:20 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\stephen_peng\大三上\微處理機\hw2\my work\hw2-2\hw2-2haha\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:16: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: hw2-2haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw2/my work/hw2-2/hw2-2haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw2-2haha.elf" @"objects.list"   -lm
+Finished building target: hw2-2haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw2-2haha.elf" "hw2-2haha.bin"
+arm-none-eabi-size "hw2-2haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1112	   1096	   1088	   3296	    ce0	hw2-2haha.elf
+ 
+00:11:29 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:00:39 **** Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:00:44 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:06:23 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:10:08 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:56:16 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\stephen_peng\大三上\微處理機\hw2\my work\hw2-2\hw2-2haha\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:16: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: hw2-2haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw2/my work/hw2-2/hw2-2haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw2-2haha.elf" @"objects.list"   -lm
+Finished building target: hw2-2haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw2-2haha.elf" "hw2-2haha.bin"
+arm-none-eabi-size "hw2-2haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1112	   1096	   1088	   3296	    ce0	hw2-2haha.elf
+ 
+18:58:01 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:58:22 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\stephen_peng\大三上\微處理機\hw2\my work\hw2-2\hw2-2haha\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:16: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: hw2-2haha.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/stephen_peng/大三上/微處理機/hw2/my work/hw2-2/hw2-2haha/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hw2-2haha.elf" @"objects.list"   -lm
+Finished building target: hw2-2haha.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hw2-2haha.elf" "hw2-2haha.bin"
+arm-none-eabi-size "hw2-2haha.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1112	   1096	   1088	   3296	    ce0	hw2-2haha.elf
+ 
+18:58:29 **** Incremental Build of configuration Debug for project hw2-2haha ****
+make -j4 all 
+make: Nothing to be done for 'all'.
